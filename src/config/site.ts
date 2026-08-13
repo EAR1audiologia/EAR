@@ -34,9 +34,7 @@ export const siteConfig = {
   contactEmail: sanitizeEmail(process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? ""),
   maps: {
     embedUrl: sanitizeHref(
-      rawEmbed && !rawEmbed.includes("api.example.com")
-        ? rawEmbed
-        : "https://www.openstreetmap.org/export/embed.html?bbox=-1.863%2C38.995%2C-1.854%2C40.001&layer=mapnik&marker=38.9982355%2C-1.8583989"
+      "https://www.openstreetmap.org/export/embed.html?bbox=-1.863%2C38.995%2C-1.854%2C40.001&layer=mapnik&marker=38.9982355%2C-1.8583989"
     ),
     directionsUrl: sanitizeHref(
       rawDirections ||

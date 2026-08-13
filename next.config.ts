@@ -64,7 +64,7 @@ const nextConfig: NextConfig = {
               "font-src 'self' data: https://fonts.gstatic.com",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "script-src 'self' 'unsafe-inline'",
-              "img-src 'self' data: blob: https://*.gstatic.com https://*.googleapis.com https://maps.gstatic.com",
+              "img-src 'self' data: blob: https://*.gstatic.com https://*.googleapis.com https://maps.gstatic.com https://tile.openstreetmap.org",
               "frame-src 'self' https://www.google.com https://google.com https://www.google.es https://google.es https://maps.google.com https://www.openstreetmap.org",
               "connect-src 'self'",
               "frame-ancestors 'self'",
@@ -75,7 +75,8 @@ const nextConfig: NextConfig = {
               "form-action 'self'",
             ].join("; "),
           },
-          { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
+          // COEP disabled to allow 3rd party map iframes (Google / OSM) that don't send CORP headers.
+          // { key: "Cross-Origin-Embedder-Policy", value: "credentialless" },
         ]
       : [
           // Dev-only: report-only CSP so we SEE violations in console but don't block eval()
