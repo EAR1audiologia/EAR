@@ -69,9 +69,9 @@ export function SiteHeader() {
       </div>
       <Container className="!max-w-[98%] lg:!max-w-[96%] xl:!max-w-[94%] 2xl:!max-w-[1800px]">
         <div className="flex items-center justify-between py-2.5 lg:py-3.5">
-          <div className="flex items-center min-w-0 flex-1">
+          <div className="flex items-center min-w-0 gap-4 xl:gap-6 2xl:gap-8">
             <Brand />
-            <nav className="hidden lg:flex items-center min-w-0 gap-6 xl:gap-7 2xl:gap-8 ml-4 xl:ml-8 2xl:ml-12 flex-1 justify-end">
+            <nav className="hidden lg:flex items-center min-w-0 gap-6 xl:gap-7 2xl:gap-8">
               <Link
                 href="/servicios"
                 className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
