@@ -55,7 +55,7 @@ export function MobileNav() {
         aria-controls={panelId}
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold shadow-sm hover:bg-zinc-50 lg:hidden whitespace-nowrap"
+        className="hidden lg:hidden"
       >
         Menú
       </button>

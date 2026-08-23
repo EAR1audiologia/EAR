@@ -146,15 +146,6 @@ export function SiteHeader() {
               </svg>
               Pedir cita
             </a>
-            <a
-              href={`tel:${siteConfig.phone.landline}`}
-              className="inline-flex rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold hover:bg-zinc-50 sm:hidden items-center gap-1.5 whitespace-nowrap"
-            >
-              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 6 3a.75.75 0 0 1 .85-.16l2.25 1.125a.75.75 0 0 1 .39.636v1.716a.75.75 0 0 1-.21.53l-.84.84a.75.75 0 0 0-.218.466 12.06 12.06 0 0 0 6.25 6.25.75.75 0 0 0 .466-.217l.84-.84a.75.75 0 0 1 .53-.211h1.716a.75.75 0 0 1 .636.391l1.125 2.25A.75.75 0 0 1 21 18l-3.75 3.75-.472 2.028Z" />
-              </svg>
-              Llamar
-            </a>
           </div>
         </div>
       </Container>

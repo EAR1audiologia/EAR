@@ -1,3 +1,5 @@
+"use client";
+
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
 
@@ -7,18 +9,27 @@ export function CTAFloatBar() {
     "Hola, quiero información sobre audición, audífonos o tratamiento de acúfenos en EAR Audiología Avanzada Albacete."
   );
 
+  const openMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const btn = document.querySelector<HTMLButtonElement>(
+      'button[aria-label="Abrir menú"]'
+    );
+    if (btn) btn.click();
+  };
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[var(--color-border)] bg-white/95 backdrop-blur lg:hidden">
       <div className="mx-auto grid max-w-6xl grid-cols-2">
-        <a
-          href={`tel:${siteConfig.phone.landline}`}
+        <button
+          type="button"
+          onClick={openMenu}
           className="flex items-center justify-center gap-2 px-4 py-4 text-sm font-semibold bg-[var(--color-accent)] text-white"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 6 3a.75.75 0 0 1 .85-.16l2.25 1.125a.75.75 0 0 1 .39.636v1.716a.75.75 0 0 1-.21.53l-.84.84a.75.75 0 0 0-.218.466 12.06 12.06 0 0 0 6.25 6.25.75.75 0 0 0 .466-.217l.84-.84a.75.75 0 0 1 .53-.211h1.716a.75.75 0 0 1 .636.391l1.125 2.25A.75.75 0 0 1 21 18l-3.75 3.75-.472 2.028Z" />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
-          Llamar
-        </a>
+          Menú
+        </button>
         <a
           href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
           className="flex items-center justify-center gap-2 border-l border-[var(--color-border)] px-4 py-4 text-sm font-semibold text-[var(--color-ink)] bg-white"
