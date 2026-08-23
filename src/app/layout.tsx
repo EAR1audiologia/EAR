@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { CTAFloatBar } from "@/components/CTAFloatBar";
+import { LenisWrapper } from "@/components/LenisWrapper";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -100,11 +101,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--color-bg)] text-[var(--color-ink)]">
-        <LocalBusinessSchema />
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <CTAFloatBar />
+        <LenisWrapper>
+          <LocalBusinessSchema />
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+          <CTAFloatBar />
+        </LenisWrapper>
       </body>
     </html>
   );

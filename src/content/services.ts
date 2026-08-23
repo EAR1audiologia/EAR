@@ -1,5 +1,6 @@
 export type ServiceItem = {
   title: string;
+  badge?: "nacional" | "online" | "nuevo";
 };
 
 export const services: ServiceItem[] = [
@@ -14,5 +15,5 @@ export const services: ServiceItem[] = [
   { title: "Asesoramiento audiológico avanzado e higiene auditiva personalizada" },
   { title: "Ayudas técnicas personalizadas" },
   { title: "Moldes y protectores auditivos a medida personalizados" },
+  { title: "Segunda opinión auditiva online y nacional", badge: "nacional" },
 ];
-

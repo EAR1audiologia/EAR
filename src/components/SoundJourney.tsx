@@ -41,8 +41,14 @@ const steps: Step[] = [
     eyebrow: "Paso 1 · Servicios",
     title: "Estudio auditivo 360º en Albacete",
     description:
-      "En EAR revisamos audición, comprensión verbal y oído externo para localizar el problema y explicarte qué opciones encajan contigo.",
-    bullets: ["Audiometría tonal y vocal", "Videotoscopia", "Resultado y siguientes pasos"],
+      "Revisamos tu oído externo y tu oído medio, evaluamos tu audición y analizamos de manera personalizada tu comprensión verbal para localizar el problema y explicarte qué opciones encajan contigo.",
+    bullets: [
+      "Anamnesis detallada de tu caso y tus dificultades",
+      "Videotoscopia del oído externo",
+      "Impedanciometría (oído medio)",
+      "Evaluación tonal y vocal completa",
+      "Ajuste y revisiones personalizadas",
+    ],
     cta: { href: "/servicios", label: "Ver servicios", variant: "secondary" },
     bg: "radial-gradient(circle at 50% 40%, #846449 0%, #2b211a 62%, #120d0a 100%)",
   },
