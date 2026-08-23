@@ -68,61 +68,63 @@ export function SiteHeader() {
         </Container>
       </div>
       <Container className="!max-w-[98%] lg:!max-w-[96%] xl:!max-w-[94%] 2xl:!max-w-[1800px]">
-        <div className="flex items-center justify-between py-2.5 lg:py-3.5">
-          <div className="flex items-center min-w-0 gap-4 xl:gap-6 2xl:gap-8">
+        <div className="flex items-center justify-between py-2 lg:py-3.5">
+          <div className="flex items-center min-w-0 shrink-0 max-w-[48%] sm:max-w-[52%] md:max-w-[58%] lg:max-w-none">
             <Brand />
-            <nav className="hidden lg:flex items-center min-w-0 gap-6 xl:gap-7 2xl:gap-8">
-              <Link
-                href="/servicios"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Servicios
-              </Link>
-              <Link
-                href="/soluciones"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Soluciones
-              </Link>
-              <Link
-                href="/evaluacion"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Evaluación
-              </Link>
-              <Link
-                href="/centro"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Centro
-              </Link>
-              <Link
-                href="/pediatria"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Pediatría
-              </Link>
-              <Link
-                href="/sobre-nosotras"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Sobre nosotras
-              </Link>
-              <Link
-                href="/faq"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contacto"
-                className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
-              >
-                Contacto
-              </Link>
-            </nav>
           </div>
-          <div className="flex items-center gap-2 xl:gap-3 pl-5 lg:pl-6 xl:pl-8 shrink-0">
+
+          <nav className="hidden lg:flex items-center min-w-0 gap-6 xl:gap-7 2xl:gap-8 mx-4 xl:mx-6">
+            <Link
+              href="/servicios"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Servicios
+            </Link>
+            <Link
+              href="/soluciones"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Soluciones
+            </Link>
+            <Link
+              href="/evaluacion"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Evaluación
+            </Link>
+            <Link
+              href="/centro"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Centro
+            </Link>
+            <Link
+              href="/pediatria"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Pediatría
+            </Link>
+            <Link
+              href="/sobre-nosotras"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Sobre nosotras
+            </Link>
+            <Link
+              href="/faq"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              FAQ
+            </Link>
+            <Link
+              href="/contacto"
+              className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
+            >
+              Contacto
+            </Link>
+          </nav>
+
+          <div className="flex items-center min-w-0 gap-2 xl:gap-3 pl-2 lg:pl-5 xl:pl-8 shrink-0 max-w-[50%] lg:max-w-none justify-end">
             <MobileNav />
             <a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
@@ -146,9 +148,9 @@ export function SiteHeader() {
             </a>
             <a
               href={`tel:${siteConfig.phone.landline}`}
-              className="inline-flex rounded-full border border-[var(--color-border)] bg-white px-3.5 py-2 text-sm font-semibold hover:bg-zinc-50 sm:hidden items-center gap-2"
+              className="inline-flex rounded-full border border-[var(--color-border)] bg-white px-3 py-1.5 text-xs font-semibold hover:bg-zinc-50 sm:hidden items-center gap-1.5 whitespace-nowrap"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+              <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 6 3a.75.75 0 0 1 .85-.16l2.25 1.125a.75.75 0 0 1 .39.636v1.716a.75.75 0 0 1-.21.53l-.84.84a.75.75 0 0 0-.218.466 12.06 12.06 0 0 0 6.25 6.25.75.75 0 0 0 .466-.217l.84-.84a.75.75 0 0 1 .53-.211h1.716a.75.75 0 0 1 .636.391l1.125 2.25A.75.75 0 0 1 21 18l-3.75 3.75-.472 2.028Z" />
               </svg>
               Llamar
