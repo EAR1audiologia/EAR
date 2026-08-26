@@ -9,7 +9,6 @@ export const IMAGES = {
 
 export const STATS = [
   { k: "20+", l: "años de experiencia" },
-  { k: "+20.000", l: "pacientes rehabilitados" },
   { k: "1:1", l: "atención directa y seguimiento" },
   { k: "360º", l: "audiología integral" },
 ];

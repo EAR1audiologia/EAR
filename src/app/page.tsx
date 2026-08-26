@@ -21,13 +21,13 @@ const featuredAreas = [
     image: "/brand/solution-entornos-ruidosos.jpg",
   },
   {
-    title: "Acúfenos y tinnitus",
+    title: "Acúfenos e hiperacusia",
     body: "Estudio auditivo, orientación clínica y plan personalizado para reducir la molestia diaria.",
     href: "/soluciones/acufenos",
     image: "/brand/solution-acufenos.jpg",
   },
   {
-    title: "Audífonos discretos y recargables",
+    title: "Audífonos a tu medida",
     body: "Valoramos si el formato invisible o recargable encaja con tu pérdida, tu oído y tu rutina.",
     href: "/soluciones/invisibles-recargables",
     image: "/brand/device-hearing-aid.jpeg",
@@ -79,11 +79,11 @@ const valueBlocks = [
   },
   {
     title: "Tratamiento de acúfenos e hiperacusia",
-    body: "Revisamos audición, molestia, hábitos y opciones reales para reducir el impacto del tinnitus y de la hiperacusia.",
+    body: "Revisamos audición, nivel de molestia, hábitos y opciones reales para reducir el impacto del tinnitus y de la hiperacusia.",
   },
   {
     title: "Seguimiento posterior",
-    body: "La adaptación no termina en la entrega: revisamos, retocamos y acompañamos.",
+    body: "Nuestra relación nunca termina: revisamos, ajustamos y acompañamos.",
   },
 ] as const;
 
@@ -91,17 +91,12 @@ const STAT_BLOCKS = [
   {
     eyebrow: "Primera visita",
     title: "Sin prisas y sin catálogo",
-    body: "Preguntamos qué te cuesta entender y qué esperas conseguir antes de empezar.",
+    body: "Un momento para que nos cuentes qué te preocupa.",
   },
   {
     eyebrow: "Soluciones",
     title: "Ajustes finos personalizados",
-    body: "Adaptamos ruido, TV, conversaciones, calle, manejo diario y revisiones posteriores.",
-  },
-  {
-    eyebrow: "Centro",
-    title: "Atención presencial en Albacete",
-    body: null,
+    body: "Trabajaremos ajustados a tus expectativas para aplicarlas en tus ambientes reales.",
   },
   {
     eyebrow: "Confianza",
@@ -156,19 +151,6 @@ function StatBody({ block, fullAddress, ratingText, reviewsCount }: {
   ratingText: string | null;
   reviewsCount: string | null;
 }) {
-  if (block.eyebrow === "Centro") {
-    return (
-      <>
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-strong)]">
-          {block.eyebrow}
-        </div>
-        <div className="mt-2 text-lg font-semibold">{block.title}</div>
-        <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
-          {fullAddress || "Consulta presencial con evaluación, orientación y seguimiento."}
-        </p>
-      </>
-    );
-  }
   if (block.eyebrow === "Confianza") {
     return (
       <>
@@ -306,7 +288,7 @@ export default function Home() {
                         Oír más no siempre significa entender mejor.
                       </div>
                       <p className="mt-1 text-[0.68rem] leading-snug text-white/78 sm:text-[0.72rem]">
-                        En consulta valoramos qué ocurre en ruido, en reuniones y en el día a día antes de proponer una solución.
+                        En consulta valoramos qué ocurre en ambientes ruidosos, en restaurantes, en reuniones, al teléfono, viendo la tele y en tu día a día antes de proponer una solución.
                       </p>
                     </div>
                   </div>
@@ -322,7 +304,7 @@ export default function Home() {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4 text-white">
                         <div className="text-[1.05rem] font-semibold leading-tight">Audífonos</div>
-                        <div className="mt-1 text-sm text-white/84">Discretos, recargables y bien ajustados</div>
+                        <div className="mt-1 text-sm text-white/84">Tecnología de vanguardia adaptada a tus necesidades</div>
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                     </div>
@@ -352,7 +334,7 @@ export default function Home() {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/52 via-black/14 to-transparent" />
                         <div className="absolute bottom-4 left-4 right-4 text-white">
                           <div className="text-[1.05rem] font-semibold leading-tight">Seguimiento posterior</div>
-                          <div className="mt-1 text-sm text-white/84">Reajustes, comprensión y adaptación</div>
+                          <div className="mt-1 text-sm text-white/84">Nos comprometemos en la adaptación, el ajuste fino y la comprensión del habla</div>
                         </div>
                         <div className="absolute bottom-0 left-0 right-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
                       </div>
@@ -369,7 +351,7 @@ export default function Home() {
 
       <section className="py-8 lg:py-10 reveal">
         <Container>
-          <div className="grid gap-4 lg:grid-cols-4">
+          <div className="grid gap-4 lg:grid-cols-3">
             {STAT_BLOCKS.map((block, i) => (
               <motion.div
                 key={block.eyebrow}
@@ -378,7 +360,7 @@ export default function Home() {
                 viewport={{ once: true, margin: "-8%" }}
                 transition={{
                   duration: 0.7,
-                  delay: (i % 4) * 0.08,
+                  delay: (i % 3) * 0.08,
                   ease: "easeOut",
                 }}
                 className="group relative rounded-[24px] border border-gold/25 bg-bone p-5 shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_50px_rgba(28,27,26,0.09)] hover:border-gold/50"
@@ -407,9 +389,6 @@ export default function Home() {
                 Un estudio más claro, más clínico y más útil para quien llega por primera vez.
               </h2>
             </div>
-            <p className="max-w-xl text-base leading-relaxed text-[var(--color-muted)]">
-              Igual que en las referencias del sector, ordenamos la información por problemas reales: foto, explicación corta y enlace a la página de detalle.
-            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -447,9 +426,6 @@ export default function Home() {
                     <div className="mt-3 text-xl font-semibold tracking-tight text-[var(--color-ink)]">
                       {item.title}
                     </div>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-[var(--color-muted)]">
-                      {item.body}
-                    </p>
                     <div className="mt-5 flex items-center justify-between">
                       <div className="text-sm font-semibold text-[var(--color-brand-strong)] transition-transform duration-500 group-hover:translate-x-1">
                         Ver detalle →

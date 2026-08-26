@@ -9,7 +9,7 @@ export function TrustStrip() {
       className="relative z-10 -mx-4 sm:-mx-6 lg:-mx-12 border-y border-[color:var(--color-gold)]/20 bg-[color:var(--color-bone)]/70 backdrop-blur-sm"
       data-testid="trust-strip"
     >
-      <div className="mx-auto grid max-w-[1400px] grid-cols-2 md:grid-cols-4">
+      <div className="mx-auto grid max-w-[1400px] grid-cols-2 md:grid-cols-3">
         {STATS.map((s, i) => (
           <motion.div
             key={s.l}
@@ -21,10 +21,6 @@ export function TrustStrip() {
               i !== 0 ? "border-l border-[color:var(--color-gold)]/15" : ""
             } ${
               i === 2
-                ? "max-md:border-t max-md:border-[color:var(--color-gold)]/15"
-                : ""
-            } ${
-              i === 3
                 ? "max-md:border-t max-md:border-[color:var(--color-gold)]/15"
                 : ""
             }`}

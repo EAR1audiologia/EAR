@@ -54,6 +54,16 @@ body {
   outline-offset: 3px;
 }
 
+::selection {
+  background: var(--color-gold);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: var(--color-gold);
+  color: #ffffff;
+}
+
 @keyframes pulse-cta {
   0%, 100% {
     box-shadow: 0 0 0 0 rgba(208, 177, 145, 0.55), 0 4px 14px rgba(208, 177, 145, 0.25);

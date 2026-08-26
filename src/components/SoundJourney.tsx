@@ -30,7 +30,7 @@ const steps: Step[] = [
   {
     id: 1,
     eyebrow: "Cuando cuesta entender",
-    title: "Oyes voces, pero se escapan palabras.",
+    title: "Oyes, ¿pero no entiendes?",
     description:
       "En restaurante, calle o reuniones, la dificultad suele estar en separar la voz del ruido. Este recorrido muestra ese cambio, paso a paso.",
     cta: { href: "/evaluacion", label: "Ver evaluación", variant: "secondary" },
@@ -43,11 +43,9 @@ const steps: Step[] = [
     description:
       "Revisamos tu oído externo y tu oído medio, evaluamos tu audición y analizamos de manera personalizada tu comprensión verbal para localizar el problema y explicarte qué opciones encajan contigo.",
     bullets: [
-      "Anamnesis detallada de tu caso y tus dificultades",
-      "Videotoscopia del oído externo",
-      "Impedanciometría (oído medio)",
-      "Evaluación tonal y vocal completa",
-      "Ajuste y revisiones personalizadas",
+      "Audiometría tonal",
+      "Logoaudiometría",
+      "Pruebas supraliminares",
     ],
     cta: { href: "/servicios", label: "Ver servicios", variant: "secondary" },
     bg: "radial-gradient(circle at 50% 40%, #846449 0%, #2b211a 62%, #120d0a 100%)",
@@ -55,10 +53,10 @@ const steps: Step[] = [
   {
     id: 3,
     eyebrow: "Paso 2 · Soluciones",
-    title: "Audífonos invisibles, bien ajustados",
+    title: "Adaptación personalizada",
     description:
-      "Si hacen falta audífonos, los ajustamos para restaurante, TV, calle y reuniones. Después revisamos resultados y retocamos lo necesario.",
-    bullets: ["Ajuste fino personalizado", "Reducción de cansancio auditivo", "Seguimiento y reajustes personalizados"],
+      "En caso de necesitar audífonos, revisamos y ajustamos para obtener resultados óptimos en tu día a día.",
+    bullets: ["Ajuste fino personalizado", "Reducción de fatiga auditiva", "Seguimiento y reajustes personalizados"],
     cta: { href: "/soluciones", label: "Ver soluciones", variant: "secondary" },
     bg: "radial-gradient(circle at 50% 40%, #ae9579 0%, #3a2c22 62%, #120d0a 100%)",
   },
