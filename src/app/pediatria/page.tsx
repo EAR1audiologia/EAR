@@ -30,32 +30,59 @@ export default function PediatriaPage() {
 
         <div className="mt-12 overflow-hidden rounded-[32px] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_20px_70px_-30px_rgba(203,178,150,0.45)]">
           <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
-            <div className="relative min-h-[360px] lg:min-h-[700px] overflow-hidden">
+            <div className="relative min-h-[430px] lg:min-h-[700px] overflow-hidden">
               <Image
                 src="/team/ana-esparcia-pediatria.jpeg"
                 alt="Ana Esparcia, especialista en audiología pediátrica"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[72%_top] sm:object-top"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent lg:bg-gradient-to-r lg:from-black/40 lg:via-black/10 lg:to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-auto lg:max-w-md">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-transparent lg:bg-gradient-to-r lg:from-black/40 lg:via-black/10 lg:to-transparent" />
+              <div className="absolute top-4 left-4 right-4 lg:top-auto lg:bottom-10 lg:left-10 lg:right-auto lg:max-w-md">
                 <div className="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)] shadow-sm">
                   <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-brand-strong)]" />
                   Atención lúdica · 0 a 16 años
                 </div>
-                <h2 className="mt-4 text-2xl font-semibold text-white leading-tight lg:text-4xl lg:leading-[1.05]">
-                  Un espacio <br /> pensado para ellos.
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-white/85 lg:text-base">
-                  Sin pantallas frías ni cascos de adulto. Material didáctico, tiempos relajados y
-                  seguimiento muy cercano con la familia.
-                </p>
+                <div className="mt-5 hidden max-w-[13rem] rounded-[24px] bg-black/14 p-4 backdrop-blur-[2px] lg:mt-4 lg:block lg:max-w-none lg:rounded-none lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
+                  <h2 className="text-[2rem] font-semibold text-white leading-[0.98] lg:text-4xl lg:leading-[1.05]">
+                    Un espacio <br /> pensado para ellos.
+                  </h2>
+                  <p className="mt-3 max-w-[14rem] text-[15px] leading-relaxed text-white/92 lg:max-w-none lg:text-base lg:text-white/85">
+                    Sin pantallas frías ni cascos de adulto. Material didáctico, tiempos relajados y
+                    seguimiento muy cercano con la familia.
+                  </p>
+                </div>
               </div>
             </div>
 
             <div className="px-4 pb-6 pt-4 sm:px-6 sm:pb-8 sm:pt-5 lg:px-8 lg:py-8 xl:px-10 xl:py-10 flex flex-col gap-8 bg-[linear-gradient(160deg,#fdfbf6_0%,#f5ead8_100%)]">
-              <div className="-mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-10 -mt-4 sm:-mt-5 lg:-mt-8 xl:-mt-10 mb-2">
+              <div className="flex flex-col gap-4 rounded-[24px] bg-white/70 p-4 shadow-[0_10px_30px_-20px_rgba(203,178,150,0.5)] lg:hidden">
+                <div className="flex items-center justify-center rounded-[20px] bg-[var(--color-surface)]/90 px-4 py-3">
+                  <Image
+                    src="/brand/ear-logo-pediatric.png"
+                    alt="EAR Pediátrico"
+                    width={2600}
+                    height={1444}
+                    className="h-auto w-full max-w-[14rem] object-contain"
+                    priority
+                  />
+                </div>
+                <div className="rounded-[20px] border border-[var(--color-border)] bg-[linear-gradient(180deg,#fffdf9_0%,#f8efe3_100%)] p-5 shadow-[0_14px_30px_-24px_rgba(203,178,150,0.85)]">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-brand-strong)]">
+                    Atención cercana
+                  </div>
+                  <h2 className="mt-3 text-[2.2rem] font-semibold leading-[0.94] tracking-tight text-[var(--color-ink)]">
+                    Un espacio <br /> pensado para ellos.
+                  </h2>
+                  <p className="mt-4 text-[15px] leading-7 text-[color:rgba(55,48,44,0.78)]">
+                    Sin pantallas frías ni cascos de adulto. Material didáctico, tiempos relajados y
+                    seguimiento muy cercano con la familia.
+                  </p>
+                </div>
+              </div>
+
+              <div className="-mx-4 sm:-mx-6 lg:-mx-8 xl:-mx-10 -mt-4 sm:-mt-5 lg:-mt-8 xl:-mt-10 mb-2 hidden lg:block">
                 <Image
                   src="/brand/ear-logo-pediatric.png"
                   alt="EAR Pediátrico"
@@ -77,10 +104,15 @@ export default function PediatriaPage() {
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4 text-sm text-[var(--color-ink)]">
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 12.75 5.25 5.25 9-9" />
-                    </svg>
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src="/brand/ear-logo-icon-LOGOICONv1.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                      aria-hidden
+                    />
                   </span>
                   <div>
                     <span className="font-semibold">Screening neonatal</span>
@@ -88,10 +120,15 @@ export default function PediatriaPage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 12.75 5.25 5.25 9-9" />
-                    </svg>
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src="/brand/ear-logo-icon-LOGOICONv1.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                      aria-hidden
+                    />
                   </span>
                   <div>
                     <span className="font-semibold">Pruebas lúdicas</span>
@@ -99,10 +136,15 @@ export default function PediatriaPage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 12.75 5.25 5.25 9-9" />
-                    </svg>
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src="/brand/ear-logo-icon-LOGOICONv1.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                      aria-hidden
+                    />
                   </span>
                   <div>
                     <span className="font-semibold">Seguimiento escolar personalizado</span>
@@ -110,10 +152,15 @@ export default function PediatriaPage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 12.75 5.25 5.25 9-9" />
-                    </svg>
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src="/brand/ear-logo-icon-LOGOICONv1.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                      aria-hidden
+                    />
                   </span>
                   <div>
                     <span className="font-semibold">Protección a medida personalizada</span>
@@ -121,10 +168,15 @@ export default function PediatriaPage() {
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                    <svg viewBox="0 0 24 24" className="h-3 w-3" fill="none" stroke="currentColor" strokeWidth="3" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="m5 12.75 5.25 5.25 9-9" />
-                    </svg>
+                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                    <Image
+                      src="/brand/ear-logo-icon-LOGOICONv1.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="h-5 w-5 object-contain"
+                      aria-hidden
+                    />
                   </span>
                   <div>
                     <span className="font-semibold">Tratamiento integral personalizado</span>

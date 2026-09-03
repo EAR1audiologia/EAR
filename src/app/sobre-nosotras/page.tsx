@@ -36,15 +36,15 @@ export default function SobreNosotrasPage() {
             src="/team/elena-ana-equipo-horizontal.jpeg"
             alt="Elena Roldán Cantos y Ana Esparcia, cofundadoras de EAR Audiología Avanzada"
             fill
-            className="object-cover object-center"
+            className="object-cover object-[50%_58%] sm:object-center"
             priority
             sizes="(min-width: 1024px) 1152px, 100vw"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 via-black/25 to-transparent px-6 pb-6 pt-24 text-white sm:px-10 sm:pb-9">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/80">
+          <div className="absolute inset-x-0 bottom-0 bg-transparent px-6 pb-6 pt-24 text-white sm:bg-gradient-to-t sm:from-black/65 sm:via-black/25 sm:to-transparent sm:px-10 sm:pb-9">
+            <p className="hidden text-xs font-semibold uppercase tracking-[0.24em] text-white/80 sm:block">
               Cofundadoras
             </p>
-            <p className="mt-2 max-w-2xl text-2xl font-semibold leading-tight sm:text-3xl">
+            <p className="mt-2 hidden max-w-2xl text-2xl font-semibold leading-tight sm:block sm:text-3xl">
               Experiencia clínica, atención cercana y una misma forma de entender la audiología.
             </p>
           </div>
