@@ -144,7 +144,7 @@ export default function SobreNosotrasPage() {
               </p>
             </div>
           </div>
-          <div className="relative min-h-[520px] lg:order-last lg:min-h-full">
+          <div className="order-first relative min-h-[520px] lg:order-last lg:min-h-full">
             <Image
               src="/team/ana-esparcia-retrato.jpeg"
               alt="Ana Esparcia, cofundadora y especialista en audiología pediátrica y acúfenos"
