@@ -55,9 +55,10 @@ export function MobileNav() {
         aria-controls={panelId}
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="xl:hidden"
+        className="sr-only"
+        tabIndex={-1}
       >
-        Menú
+        Abrir menú
       </button>
 
       {typeof document !== "undefined" && open
