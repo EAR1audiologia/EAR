@@ -316,7 +316,7 @@ export default function Home() {
           <div className="grid gap-6 lg:grid-cols-2">
             {[
               {
-                name: "Elena Roldán Cantos",
+                name: "Elena Roldán",
                 role: "Audióloga protésica y cofundadora",
                 image: "/team/elena-roldan-sentada.jpeg",
                 alt: "Elena Roldán Cantos sentada en la consulta de EAR Audiología Avanzada",
