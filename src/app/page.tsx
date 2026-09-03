@@ -224,18 +224,21 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_20px_60px_-30px_rgba(0,0,0,0.2)] lg:hidden">
-                  <Image
-                    src="/team/elena-ana-contacto.jpeg"
-                    alt="Elena Roldán y Ana Esparcia, audiólogas y cofundadoras de EAR Audiología Avanzada"
-                    fill
-                    className="object-cover object-[center_32%]"
-                    priority
-                    sizes="100vw"
-                  />
-                  <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/94 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-strong)] shadow-sm">
+                <div className="flex flex-col gap-0 lg:hidden">
+                  <div className="inline-flex items-center gap-2 self-start rounded-full bg-white/94 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-strong)] shadow-sm">
                     <MiniBadge />
                     Elena y Ana · Atención directa
+                  </div>
+
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_20px_60px_-30px_rgba(0,0,0,0.2)]">
+                    <Image
+                      src="/team/elena-ana-contacto.jpeg"
+                      alt="Elena Roldán y Ana Esparcia, audiólogas y cofundadoras de EAR Audiología Avanzada"
+                      fill
+                      className="object-cover object-[center_32%]"
+                      priority
+                      sizes="100vw"
+                    />
                   </div>
                 </div>
 
