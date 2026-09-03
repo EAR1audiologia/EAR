@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Container } from "@/components/Container";
+import { ProductPhotoGallery } from "@/components/ProductPhotoGallery";
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
 
@@ -10,39 +10,10 @@ export default function InvisiblesRecargablesPage() {
       <Container>
         <div className="overflow-hidden rounded-[32px] border border-[var(--color-border)] bg-[var(--color-surface)] shadow-[0_20px_70px_-30px_rgba(203,178,150,0.45)]">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-            <div
-              className="relative min-h-[440px] lg:min-h-[720px] overflow-hidden"
-              style={{
-                background:
-                  "linear-gradient(145deg,#f6eef9_0%,#eadff0_40%,#e0d0ea_100%)",
-              }}
-            >
-              <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-10 lg:p-14">
-                <Image
-                  src="/brand/device-hearing-aid.jpeg"
-                  alt="Audífonos Oticon recargables de gama en formato BTE y RIC"
-                  width={2000}
-                  height={1400}
-                  className="w-full h-full max-h-[620px] lg:max-h-[680px] object-contain drop-shadow-[0_30px_40px_rgba(120,70,160,0.28)]"
-                  priority
-                />
-              </div>
+            <div className="relative overflow-hidden">
+              <ProductPhotoGallery />
               <div className="absolute left-5 top-5 rounded-full bg-white/85 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.22em] text-[var(--color-ink)] backdrop-blur">
                 Recargable · Discreto
-              </div>
-              <div className="absolute bottom-5 left-5 right-5 flex flex-wrap gap-2">
-                {[
-                  "LED de estado",
-                  "Hasta 24h de batería",
-                  "Ajuste fino personalizado",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-white/60 bg-white/75 px-3 py-1.5 text-[12px] font-medium text-[var(--color-ink)] backdrop-blur"
-                  >
-                    {tag}
-                  </span>
-                ))}
               </div>
             </div>
 

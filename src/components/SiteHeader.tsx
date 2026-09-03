@@ -16,7 +16,7 @@ function Brand() {
         alt="EAR Audiología Avanzada"
         width={320}
         height={84}
-        className="h-14 w-auto sm:h-16 lg:h-[78px] xl:h-20 xl:w-[340px] object-contain object-left"
+        className="h-14 w-auto object-contain object-left sm:h-16 lg:h-[70px] xl:h-16 2xl:h-20 2xl:w-[340px]"
         priority
       />
       <span className="sr-only">{siteConfig.brandName}</span>
@@ -73,7 +73,7 @@ export function SiteHeader() {
             <Brand />
           </div>
 
-          <nav className="hidden lg:flex items-center min-w-0 gap-6 xl:gap-7 2xl:gap-8 mx-4 xl:mx-6">
+          <nav className="mx-4 hidden shrink-0 items-center gap-5 xl:flex 2xl:mx-6 2xl:gap-7">
             <Link
               href="/servicios"
               className="relative py-1 text-sm font-medium text-[var(--color-ink)] transition-colors hover:text-[var(--color-brand-strong)] after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-0 after:bg-[var(--color-brand-strong)] after:transition-all after:duration-300 hover:after:w-full whitespace-nowrap shrink-0"
@@ -124,11 +124,11 @@ export function SiteHeader() {
             </Link>
           </nav>
 
-          <div className="flex items-center min-w-0 gap-2 xl:gap-3 pl-2 lg:pl-5 xl:pl-8 shrink-0 max-w-[50%] lg:max-w-none justify-end">
+          <div className="flex max-w-[50%] shrink-0 items-center justify-end gap-2 pl-2 lg:max-w-none lg:pl-5 xl:ml-2 xl:max-w-none xl:border-l xl:border-[var(--color-border)] xl:pl-5 2xl:gap-3 2xl:pl-7">
             <MobileNav />
             <a
               href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
-              className="hidden rounded-full border border-[var(--color-border)] bg-white px-2.5 py-1.5 text-xs font-semibold shadow-sm hover:bg-zinc-50 lg:inline-flex items-center gap-1 whitespace-nowrap"
+              className="hidden rounded-full border border-[var(--color-border)] bg-white px-2.5 py-1.5 text-xs font-semibold shadow-sm hover:bg-zinc-50 xl:inline-flex items-center gap-1 whitespace-nowrap"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -139,7 +139,7 @@ export function SiteHeader() {
             </a>
             <a
               href={`tel:${siteConfig.phone.landline}`}
-              className="hidden rounded-full bg-[var(--color-accent)] px-2.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:opacity-95 lg:inline-flex items-center gap-1 whitespace-nowrap"
+              className="hidden rounded-full bg-[var(--color-accent)] px-2.5 py-1.5 text-xs font-semibold text-white shadow-sm hover:opacity-95 xl:inline-flex items-center gap-1 whitespace-nowrap"
             >
               <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75 6 3a.75.75 0 0 1 .85-.16l2.25 1.125a.75.75 0 0 1 .39.636v1.716a.75.75 0 0 1-.21.53l-.84.84a.75.75 0 0 0-.218.466 12.06 12.06 0 0 0 6.25 6.25.75.75 0 0 0 .466-.217l.84-.84a.75.75 0 0 1 .53-.211h1.716a.75.75 0 0 1 .636.391l1.125 2.25A.75.75 0 0 1 21 18l-3.75 3.75-.472 2.028Z" />

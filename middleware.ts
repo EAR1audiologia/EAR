@@ -20,7 +20,6 @@ import {
 //
 //   [RATE LIMIT LAYER — ONLY /api/:path* DYNAMIC ENDPOINTS]
 //     (5) Per-IP sliding window, per-route tuned:
-//         - /api/contact*      →  5 req / 10 min   (spam magnet, strictest)
 //         - /api/* (fallback)  → 30 req / 1  min   (general API use)
 //         Backend:
 //         - Vercel KV (Redis)  → if KV_REST_API_URL env present, DURABLE distributed
@@ -45,12 +44,6 @@ const RATE_LIMIT_RULES: Array<{
   limit: number;
   name: string;
 }> = [
-  {
-    name: "/api/contact - form submit spam protection",
-    match: (p) => p.startsWith("/api/contact"),
-    windowMs: 10 * 60 * 1000, // 10 minutes
-    limit: 5,
-  },
   {
     name: "/api/* - general fallback",
     match: (p) => p.startsWith("/api/"),

@@ -71,8 +71,8 @@ export function SiteFooter() {
               <Link href="/pediatria" className="hover:text-[var(--color-ink)]">
                 Pediatría
               </Link>
-              <Link href="/equipo" className="hover:text-[var(--color-ink)]">
-                Equipo
+              <Link href="/sobre-nosotras" className="hover:text-[var(--color-ink)]">
+                Sobre nosotras
               </Link>
               <Link href="/faq" className="hover:text-[var(--color-ink)]">
                 FAQ

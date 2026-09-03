@@ -36,7 +36,7 @@ const featuredAreas = [
     title: "Seguimiento y rehabilitación",
     body: "Ajustes finos, comprensión del habla y revisiones para que la adaptación funcione de verdad.",
     href: "/soluciones/rehabilitacion",
-    image: "/brand/solution-rehabilitacion.jpg",
+    image: "/brand/home-followup.jpg",
   },
 ] as const;
 
@@ -578,6 +578,51 @@ export default function Home() {
 
       <section className="py-12 lg:py-16 reveal">
         <Container>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-8%" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="group grid overflow-hidden rounded-[32px] border border-gold/25 bg-bone shadow-sm transition-all duration-500 hover:shadow-[0_20px_60px_rgba(28,27,26,0.1)] lg:grid-cols-[1.05fr_0.95fr]"
+          >
+            <div className="relative min-h-[380px] overflow-hidden sm:min-h-[480px] lg:min-h-[560px]">
+              <Image
+                src="/team/elena-ana-natural.jpeg"
+                alt="Ana Esparcia y Elena Roldán, cofundadoras de EAR Audiología Avanzada"
+                fill
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.025]"
+                sizes="(min-width: 1024px) 55vw, 100vw"
+              />
+            </div>
+            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
+              <div className="flex items-center gap-3">
+                <MiniBadge />
+                <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)]">
+                  Elena y Ana · Cofundadoras
+                </div>
+              </div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+                Dos profesionales. Una forma cercana de cuidar tu audición.
+              </h2>
+              <p className="mt-4 text-base leading-8 text-[var(--color-muted)]">
+                Sumamos más de 20 años de experiencia cada una, con atención directa y una
+                recomendación pensada para tu vida, no para un catálogo.
+              </p>
+              <div className="mt-7">
+                <Link
+                  href="/sobre-nosotras"
+                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-500 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-md"
+                >
+                  Conócenos
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </Container>
+      </section>
+
+      <section className="py-12 lg:py-16 reveal">
+        <Container>
           <div className="grid gap-8 lg:grid-cols-[1.02fr_0.98fr]">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -713,7 +758,7 @@ export default function Home() {
               <div className="grid gap-4 sm:grid-cols-2">
                 {[
                   { img: "/brand/solution-acufenos.jpg", alt: "Tratamiento de acúfenos" },
-                  { img: "/brand/solution-rehabilitacion.jpg", alt: "Rehabilitación auditiva y seguimiento" },
+                  { img: "/brand/home-followup.jpg", alt: "Rehabilitación auditiva y seguimiento" },
                 ].map((photo, i) => (
                   <motion.div
                     key={photo.alt}

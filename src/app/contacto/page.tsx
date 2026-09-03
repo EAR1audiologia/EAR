@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Navigation } from "lucide-react";
 import { Container } from "@/components/Container";
@@ -78,6 +79,52 @@ export default function ContactoPage() {
             </div>
           </div>
         </div>
+
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-8%" }}
+          transition={{ duration: 0.75, ease: "easeOut" }}
+          className="mt-10 grid overflow-hidden rounded-[32px] border border-[var(--color-border)] bg-white shadow-sm lg:grid-cols-[0.9fr_1.1fr]"
+        >
+          <div className="relative min-h-[420px] sm:min-h-[520px] lg:min-h-[620px]">
+            <Image
+              src="/team/elena-ana-contacto.jpeg"
+              alt="Elena Roldán y Ana Esparcia en EAR Audiología Avanzada"
+              fill
+              className="object-cover object-center"
+              sizes="(min-width: 1024px) 45vw, 100vw"
+            />
+          </div>
+          <div className="flex flex-col justify-center bg-[linear-gradient(160deg,#fdfbf6_0%,#f5ead8_100%)] p-8 sm:p-10 lg:p-12">
+            <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)]">
+              Hablas directamente con nosotras
+            </div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+              Cuéntanos qué necesitas.
+            </h2>
+            <p className="mt-4 max-w-xl text-base leading-8 text-[var(--color-muted)]">
+              Elena y Ana te orientarán personalmente sobre la visita, las pruebas y el siguiente
+              paso. Sin centralitas ni intermediarios.
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <a
+                href={`tel:${siteConfig.phone.landline}`}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-95"
+              >
+                Llamar ahora
+              </a>
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${whatsappText}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-ink)] shadow-sm hover:bg-zinc-50"
+              >
+                Escribir por WhatsApp
+              </a>
+            </div>
+          </div>
+        </motion.section>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2 lg:items-start">
           <div className="rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-white p-6">

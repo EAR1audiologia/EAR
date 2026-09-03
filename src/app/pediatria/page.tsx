@@ -32,10 +32,10 @@ export default function PediatriaPage() {
           <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
             <div className="relative min-h-[360px] lg:min-h-[700px] overflow-hidden">
               <Image
-                src="/brand/solution-rehabilitacion.jpg"
-                alt="Espacio clínico de audiología pediátrica"
+                src="/team/ana-esparcia-pediatria.jpeg"
+                alt="Ana Esparcia, especialista en audiología pediátrica"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent lg:bg-gradient-to-r lg:from-black/40 lg:via-black/10 lg:to-transparent" />

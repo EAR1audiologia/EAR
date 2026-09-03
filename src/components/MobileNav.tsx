@@ -55,7 +55,7 @@ export function MobileNav() {
         aria-controls={panelId}
         aria-expanded={open}
         onClick={() => setOpen(true)}
-        className="hidden lg:hidden"
+        className="xl:hidden"
       >
         Menú
       </button>
@@ -63,7 +63,7 @@ export function MobileNav() {
       {typeof document !== "undefined" && open
         ? createPortal(
             <div
-              className="fixed inset-0 z-[999] bg-[var(--color-bg)] lg:hidden"
+              className="fixed inset-0 z-[999] bg-[var(--color-bg)] xl:hidden"
               role="dialog"
               aria-modal="true"
               aria-label="Menú"
