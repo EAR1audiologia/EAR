@@ -30,7 +30,7 @@ const featuredAreas = [
     title: "Audífonos a tu medida",
     body: "Valoramos si el formato invisible o recargable encaja con tu pérdida, tu oído y tu rutina.",
     href: "/soluciones/invisibles-recargables",
-    image: "/brand/device-hearing-aid.jpeg",
+    image: "/products/audifono-entre-manos-signia.jpeg",
   },
   {
     title: "Seguimiento y rehabilitación",
@@ -224,6 +224,21 @@ export default function Home() {
                   </p>
                 </div>
 
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_20px_60px_-30px_rgba(0,0,0,0.2)] lg:hidden">
+                  <Image
+                    src="/team/elena-ana-contacto.jpeg"
+                    alt="Elena Roldán y Ana Esparcia, audiólogas y cofundadoras de EAR Audiología Avanzada"
+                    fill
+                    className="object-cover object-[center_32%]"
+                    priority
+                    sizes="100vw"
+                  />
+                  <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-white/94 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--color-brand-strong)] shadow-sm">
+                    <MiniBadge />
+                    Elena y Ana · Atención directa
+                  </div>
+                </div>
+
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <a
                     href={`tel:${siteConfig.phone.landline}`}
@@ -258,87 +273,19 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-10 reveal">
-                <div className="grid gap-5 md:grid-cols-[1.18fr_0.82fr]">
-                  <div className="relative min-h-[420px] overflow-hidden rounded-[34px] border border-[var(--color-border)] bg-white shadow-[0_25px_70px_-32px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_30px_80px_-28px_rgba(203,178,150,0.28)]">
-                    <Image
-                      src="/brand/home-clinic-main.jpg"
-                      alt="Consulta clínica entre paciente y profesional de audiología"
-                      fill
-                      className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-                      priority
-                    />
-                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.08))]" />
-                    <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/94 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-strong)] shadow-sm transition-all duration-500 group-hover:bg-white">
-                      <Image
-                        src="/brand/logoICON.png"
-                        alt=""
-                        width={16}
-                        height={16}
-                        className="h-4 w-4 object-contain"
-                        aria-hidden
-                      />
-                      Atención clínica real
-                    </div>
-                    <div className="absolute bottom-5 left-5 w-[62%] max-w-[62%] aspect-[5/4] rounded-[22px] border border-white/10 bg-[rgba(255,255,255,0.10)] p-3 text-white shadow-[0_10px_24px_rgba(0,0,0,0.08)] backdrop-blur-[5px] flex flex-col justify-center transition-all duration-500 hover:bg-[rgba(255,255,255,0.14)]">
-                      <div className="text-[9px] font-semibold uppercase tracking-[0.22em] text-white/68">
-                        Comprensión del habla
-                      </div>
-                      <div className="mt-0.5 text-[1rem] font-semibold leading-[1.1] sm:text-[1.08rem]">
-                        Oír más no siempre significa entender mejor.
-                      </div>
-                      <p className="mt-1 text-[0.68rem] leading-snug text-white/78 sm:text-[0.72rem]">
-                        En consulta valoramos qué ocurre en ambientes ruidosos, en restaurantes, en reuniones, al teléfono, viendo la tele y en tu día a día antes de proponer una solución.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-4">
-                    <div className="relative min-h-[200px] overflow-hidden rounded-[28px] border border-gold/25 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_50px_rgba(28,27,26,0.09)] hover:border-gold/50 group">
-                      <Image
-                        src="/brand/home-hearing-aids.jpg"
-                        alt="Audífonos recargables"
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4 text-white">
-                        <div className="text-[1.05rem] font-semibold leading-tight">Audífonos</div>
-                        <div className="mt-1 text-sm text-white/84">Tecnología de vanguardia adaptada a tus necesidades</div>
-                      </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                    </div>
-
-                    <div className="grid flex-1 gap-4 sm:grid-cols-2 md:grid-cols-1">
-                      <div className="relative min-h-[170px] overflow-hidden rounded-[28px] border border-gold/25 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_50px_rgba(28,27,26,0.09)] hover:border-gold/50 group">
-                        <Image
-                          src="/brand/home-tinnitus-consult.jpg"
-                          alt="Consulta clínica para acúfenos, tinnitus e hiperacusia"
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/15 to-transparent" />
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <div className="text-[1.05rem] font-semibold leading-tight">Acúfenos e hiperacusia</div>
-                          <div className="mt-1 text-sm text-white/84">Valoración clínica y plan personalizado</div>
-                        </div>
-                        <div className="absolute bottom-0 left-0 right-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                      </div>
-                      <div className="relative min-h-[170px] overflow-hidden rounded-[28px] border border-gold/25 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_50px_rgba(28,27,26,0.09)] hover:border-gold/50 group">
-                        <Image
-                          src="/brand/home-followup.jpg"
-                          alt="Seguimiento y rehabilitación auditiva"
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/52 via-black/14 to-transparent" />
-                        <div className="absolute bottom-4 left-4 right-4 text-white">
-                          <div className="text-[1.05rem] font-semibold leading-tight">Seguimiento posterior</div>
-                          <div className="mt-1 text-sm text-white/84">Nos comprometemos en la adaptación, el ajuste fino y la comprensión del habla</div>
-                        </div>
-                        <div className="absolute bottom-0 left-0 right-0 h-px w-0 bg-gold transition-all duration-500 group-hover:w-full" />
-                      </div>
-                    </div>
+              <div className="relative z-10 hidden reveal lg:block">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-[28px] border border-[var(--color-border)] bg-white shadow-[0_25px_70px_-32px_rgba(0,0,0,0.18)] sm:aspect-[16/10] lg:aspect-auto lg:min-h-[620px] lg:rounded-[34px]">
+                  <Image
+                    src="/team/elena-ana-contacto.jpeg"
+                    alt="Elena Roldán y Ana Esparcia, audiólogas y cofundadoras de EAR Audiología Avanzada"
+                    fill
+                    className="object-cover object-[center_32%] lg:object-contain lg:object-center"
+                    priority
+                    sizes="(min-width: 1024px) 53vw, 100vw"
+                  />
+                  <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full bg-white/94 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-[var(--color-brand-strong)] shadow-sm">
+                    <MiniBadge />
+                    Elena y Ana · Atención directa
                   </div>
                 </div>
               </div>
@@ -348,6 +295,72 @@ export default function Home() {
       </section>
 
       <Marquee />
+
+      <section className="py-12 lg:py-16 reveal">
+        <Container>
+          <div className="mb-8 max-w-3xl">
+            <div className="flex items-center gap-3">
+              <MiniBadge />
+              <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)]">
+                Conócenos
+              </div>
+            </div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
+              Dos profesionales. Una forma cercana de cuidar tu audición.
+            </h2>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            {[
+              {
+                name: "Elena Roldán Cantos",
+                role: "Audióloga protésica y cofundadora",
+                image: "/team/elena-roldan-sentada.jpeg",
+                alt: "Elena Roldán Cantos sentada en la consulta de EAR Audiología Avanzada",
+              },
+              {
+                name: "Ana Esparcia",
+                role: "Audiología pediátrica, acúfenos y cofundadora",
+                image: "/team/ana-esparcia-pediatria.jpeg",
+                alt: "Ana Esparcia sentada en la consulta de EAR Audiología Avanzada",
+              },
+            ].map((member, index) => (
+              <motion.article
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-8%" }}
+                transition={{ duration: 0.75, delay: index * 0.08, ease: "easeOut" }}
+                className="group overflow-hidden rounded-[32px] border border-gold/25 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_rgba(28,27,26,0.1)]"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[4/5] lg:aspect-auto lg:min-h-[620px]">
+                  <Image
+                    src={member.image}
+                    alt={member.alt}
+                    fill
+                    className="object-cover object-[center_24%] transition-transform duration-700 group-hover:scale-[1.025] sm:object-top"
+                    sizes="(min-width: 1024px) 50vw, 100vw"
+                  />
+                </div>
+                <div className="p-6 sm:p-7">
+                  <h3 className="text-2xl font-semibold tracking-tight text-[var(--color-ink)]">
+                    {member.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-muted)]">
+                    {member.role}
+                  </p>
+                  <Link
+                    href="/sobre-nosotras"
+                    className="mt-5 inline-flex text-sm font-semibold text-[var(--color-brand-strong)]"
+                  >
+                    Leer biografía →
+                  </Link>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </Container>
+      </section>
 
       <section className="py-8 lg:py-10 reveal">
         <Container>
@@ -575,51 +588,6 @@ export default function Home() {
       </section>
 
       <SoundJourney />
-
-      <section className="py-12 lg:py-16 reveal">
-        <Container>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-8%" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="group grid overflow-hidden rounded-[32px] border border-gold/25 bg-bone shadow-sm transition-all duration-500 hover:shadow-[0_20px_60px_rgba(28,27,26,0.1)] lg:grid-cols-[1.05fr_0.95fr]"
-          >
-            <div className="relative min-h-[380px] overflow-hidden sm:min-h-[480px] lg:min-h-[560px]">
-              <Image
-                src="/team/elena-ana-natural.jpeg"
-                alt="Ana Esparcia y Elena Roldán, cofundadoras de EAR Audiología Avanzada"
-                fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-[1.025]"
-                sizes="(min-width: 1024px) 55vw, 100vw"
-              />
-            </div>
-            <div className="flex flex-col justify-center p-8 sm:p-10 lg:p-12">
-              <div className="flex items-center gap-3">
-                <MiniBadge />
-                <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)]">
-                  Elena y Ana · Cofundadoras
-                </div>
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-4xl">
-                Dos profesionales. Una forma cercana de cuidar tu audición.
-              </h2>
-              <p className="mt-4 text-base leading-8 text-[var(--color-muted)]">
-                Sumamos más de 20 años de experiencia cada una, con atención directa y una
-                recomendación pensada para tu vida, no para un catálogo.
-              </p>
-              <div className="mt-7">
-                <Link
-                  href="/sobre-nosotras"
-                  className="inline-flex items-center justify-center rounded-full bg-[var(--color-accent)] px-7 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-500 hover:-translate-y-0.5 hover:opacity-95 hover:shadow-md"
-                >
-                  Conócenos
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </Container>
-      </section>
 
       <section className="py-12 lg:py-16 reveal">
         <Container>
