@@ -26,14 +26,14 @@ export default function SobreNosotrasPage() {
             Dos audiólogas, <br />
             <span className="text-[var(--color-brand-strong)]">más de 20 años escuchando.</span>
           </h1>
-          <p className="max-w-2xl text-base leading-relaxed text-[var(--color-muted)] sm:text-lg">
+          <p className="hidden max-w-2xl text-base leading-relaxed text-[var(--color-muted)] sm:block sm:text-lg">
             Audiología clínica en Albacete. Evaluamos, explicamos y acompañamos.
           </p>
         </div>
 
         <div className="relative mt-12 aspect-[4/5] overflow-hidden rounded-[32px] border border-[var(--color-border)] bg-white shadow-sm sm:aspect-[1024/694]">
           <Image
-            src="/team/elena-ana-equipo-horizontal.jpeg"
+            src="/team/elena-ana-equipo-2026.jpeg"
             alt="Elena Roldán Cantos y Ana Esparcia, cofundadoras de EAR Audiología Avanzada"
             fill
             className="object-cover object-[50%_58%] sm:object-center"
@@ -48,6 +48,15 @@ export default function SobreNosotrasPage() {
               Experiencia clínica, atención cercana y una misma forma de entender la audiología.
             </p>
           </div>
+        </div>
+
+        <div className="mt-5 rounded-[24px] border border-[var(--color-border)] bg-[linear-gradient(180deg,#fffdf9_0%,#f8efe3_100%)] p-5 shadow-[0_14px_30px_-24px_rgba(203,178,150,0.85)] sm:hidden">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--color-brand-strong)]">
+            Sobre nosotras
+          </div>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-[var(--color-muted)]">
+            Audiología clínica en Albacete. Evaluamos, explicamos y acompañamos.
+          </p>
         </div>
 
         <section className="mt-14 grid overflow-hidden rounded-[32px] border border-[var(--color-border)] bg-white shadow-sm lg:grid-cols-[0.72fr_1.28fr]">
