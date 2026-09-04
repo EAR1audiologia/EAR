@@ -27,7 +27,7 @@ const solutions = [
       "Formatos discretos o fáciles de manejar según la pérdida, el oído y la rutina.",
     href: "/soluciones/invisibles-recargables",
     bullets: ["Discreción", "Comodidad", "Manejo"],
-    image: "/brand/device-hearing-aid.jpeg",
+    image: "/products/audifonos-invisibles-2026.jpeg",
   },
   {
     title: "Rehabilitación y seguimiento personalizado",
