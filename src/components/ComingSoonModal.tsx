@@ -215,7 +215,7 @@ export function ComingSoonModal() {
                 <button
                   type="button"
                   onClick={close}
-                  className="group inline-flex min-h-12 w-full items-center justify-center gap-4 rounded-full bg-[var(--color-ink)] px-7 py-3 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(27,27,27,0.2)] transition duration-300 hover:-translate-y-0.5 hover:bg-[var(--color-brand-strong)] sm:w-auto"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-4 rounded-full bg-[var(--color-brand-strong)] px-7 py-3 text-sm font-semibold text-white shadow-[0_12px_28px_rgba(176,148,117,0.28)] transition duration-300 hover:-translate-y-0.5 hover:opacity-95 sm:w-auto"
                 >
                   <span className="grid h-7 w-7 place-items-center rounded-full bg-white transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-6">
                     <Image
