@@ -76,10 +76,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/brand/ear-logo-icon-LOGOICONv1.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "32x32", type: "image/png" },
     ],
-    shortcut: "/brand/ear-logo-icon-LOGOICONv1.png",
-    apple: [{ url: "/brand/ear-logo-icon-LOGOICONv1.png", sizes: "180x180" }],
+    shortcut: "/icon.png",
+    apple: [{ url: "/icon.png", sizes: "180x180" }],
   },
 };
 
