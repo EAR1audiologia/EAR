@@ -5,6 +5,7 @@ import { ComingSoonModal } from "@/components/ComingSoonModal";
 import { CTAFloatBar } from "@/components/CTAFloatBar";
 import { LenisWrapper } from "@/components/LenisWrapper";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
+import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { siteConfig } from "@/config/site";
@@ -107,6 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
+          <ScrollToTopButton />
           <CTAFloatBar />
           <ComingSoonModal />
         </LenisWrapper>
