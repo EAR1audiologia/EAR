@@ -46,7 +46,7 @@ export function ScrollToTopButton() {
   if (!visible) return null;
 
   return (
-    <div className="pointer-events-none fixed bottom-[5.25rem] right-4 z-[60] xl:hidden">
+    <div className="pointer-events-none fixed bottom-[4.5rem] right-4 z-[60] xl:hidden">
       <button
         type="button"
         onClick={scrollToTop}
