@@ -15,7 +15,7 @@ export function LenisWrapper({ children }: LenisWrapperProps) {
         lerp: 0.11,
         duration: 1.2,
         smoothWheel: true,
-        syncTouch: true,
+        syncTouch: false,
       }}
     >
       {children}
