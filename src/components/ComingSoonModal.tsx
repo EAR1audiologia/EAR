@@ -5,7 +5,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-const DISPLAY_DELAY_MS = 5_000;
+const DISPLAY_DELAY_MS = 30_000;
 
 export function ComingSoonModal() {
   const [open, setOpen] = useState(false);
