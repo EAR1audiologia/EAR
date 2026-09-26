@@ -103,8 +103,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="es"
       className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[var(--color-bg)] text-[var(--color-ink)]">
+      <head>
         <CookiebotScripts />
+      </head>
+      <body className="min-h-full flex flex-col bg-[var(--color-bg)] text-[var(--color-ink)]">
         <LenisWrapper>
           <LocalBusinessSchema />
           <SiteHeader />
