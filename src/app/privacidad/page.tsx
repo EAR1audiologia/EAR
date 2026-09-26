@@ -1,12 +1,27 @@
 import { Container } from "@/components/Container";
 import { siteConfig } from "@/config/site";
 
-const LEGAL_ENTITY = "Audífonos Elena S.L.";
+const LEGAL_ENTITY = "Audifonos Elena S.L.";
 const LEGAL_CIF = "B26856781";
-const LEGAL_ADDRESS_1 = "C/ Ricardo Castro, 4 · 02001 Albacete";
-const LEGAL_ADDRESS_2 = "C/ Carmen nº 17 · 02005 Albacete";
-const LEGAL_RIGHTS_EMAIL = siteConfig.contactEmail;
 const LEGAL_SITE = "earaudiologiaavanzada.com";
+const LEGAL_ADDRESS = "C/ Carmen, 17 · 02005 Albacete";
+const LEGAL_RIGHTS_EMAIL = siteConfig.contactEmail;
+const UPDATED_AT = "26 de septiembre de 2026";
+
+const PROCESSORS = [
+  {
+    name: "Vercel",
+    role: "Alojamiento y entrega de la web",
+  },
+  {
+    name: "Cookiebot / Usercentrics",
+    role: "Gestion del consentimiento de cookies cuando esta funcionalidad esta activa",
+  },
+  {
+    name: "Proveedores externos activados por el usuario",
+    role: "Servicios como Google Maps, Google Reviews, WhatsApp o clientes de correo cuando el usuario decide interactuar con ellos",
+  },
+] as const;
 
 export default function PrivacidadPage() {
   return (
@@ -14,169 +29,223 @@ export default function PrivacidadPage() {
       <Container>
         <div className="space-y-3">
           <h1 className="text-4xl font-semibold tracking-tight">
-            Política de privacidad
+            Politica de privacidad
           </h1>
           <p className="max-w-3xl text-[var(--color-muted)]">
-            Información completa sobre tratamiento de datos, aviso legal y condiciones de uso del
-            sitio web de {siteConfig.brandName}, titularidad de {LEGAL_ENTITY}.
+            Informacion sobre el tratamiento de datos personales realizado a
+            traves del sitio web de {siteConfig.brandName}, titularidad de{" "}
+            {LEGAL_ENTITY}.
+          </p>
+          <p className="text-sm text-[var(--color-muted)]">
+            Ultima actualizacion: {UPDATED_AT}
           </p>
         </div>
 
-        <article className="mt-12 space-y-12 text-[17px] sm:text-[18px] leading-9 text-[var(--color-muted)]">
+        <article className="mt-12 space-y-12 text-[17px] leading-9 text-[var(--color-muted)] sm:text-[18px]">
           <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Alcance de esta politica
+            </h2>
             <p>
-              A través de este sitio web no se recaban datos de carácter personal de los usuarios sin su conocimiento,
-              ni se ceden a terceros.
+              Esta politica se refiere exclusivamente al uso del sitio web y a
+              los tratamientos de datos asociados a la navegacion, al contacto
+              por medios digitales y a los servicios tecnicos necesarios para
+              prestar la web.
             </p>
             <p>
-              Con la finalidad de ofrecerle el mejor servicio y con el objeto de facilitar el uso, se analizan el número
-              de páginas visitadas, el número de visitas, así como la actividad de los visitantes y su frecuencia de
-              utilización. A estos efectos, {LEGAL_ENTITY} tiene acceso a la información estadística elaborada por
-              el Proveedor de Servicios de Internet.
-            </p>
-            <p>
-              {LEGAL_ENTITY} no utiliza cookies para recoger información de los usuarios, ni registra las direcciones
-              IP de acceso. Únicamente se utilizan cookies propias, de sesión, con finalidad técnica (aquellas que
-              permiten al usuario la navegación a través del sitio web y la utilización de las diferentes opciones y
-              servicios que en ella existen).
-            </p>
-            <p>
-              El portal del que es titular {LEGAL_ENTITY} contiene enlaces a sitios web de terceros, cuyas
-              políticas de privacidad son ajenas a la de {LEGAL_ENTITY}. Al acceder a tales sitios web usted puede
-              decidir si acepta sus políticas de privacidad y de cookies. Con carácter general, si navega por internet
-              usted puede aceptar o rechazar las cookies de terceros desde las opciones de configuración de su
-              navegador.
+              No regula el consentimiento asistencial, la historia clinica ni la
+              documentacion sanitaria que la clinica gestione por otras vias.
             </p>
           </section>
 
           <section className="space-y-5">
-            <h2 className="text-3xl sm:text-[34px] font-semibold tracking-tight text-[var(--color-ink)] leading-tight">
-              Información básica sobre protección de datos
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Responsable del tratamiento
             </h2>
+            <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+              <p>
+                <strong className="text-[var(--color-ink)]">{LEGAL_ENTITY}</strong>
+              </p>
+              <p>CIF/NIF: {LEGAL_CIF}</p>
+              <p>Domicilio: {LEGAL_ADDRESS}</p>
+              <p>
+                Email de contacto y ejercicio de derechos:{" "}
+                <a
+                  className="underline text-[var(--color-ink)]"
+                  href={`mailto:${LEGAL_RIGHTS_EMAIL}`}
+                >
+                  {LEGAL_RIGHTS_EMAIL}
+                </a>
+              </p>
+              <p>Sitio web: {LEGAL_SITE}</p>
+            </div>
             <p>
-              A continuación le informamos sobre la política de protección de datos de {LEGAL_ENTITY}.
+              Si la clinica designa o publica un Delegado de Proteccion de
+              Datos, esta politica se actualizara con sus datos de contacto.
             </p>
-
-            <dl className="grid gap-5 sm:grid-cols-1">
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">
-                  Responsable del tratamiento
-                </dt>
-                <dd>
-                  Los datos de carácter personal que se pudieran recabar directamente del interesado serán tratados
-                  de forma confidencial y quedarán incorporados a la correspondiente actividad de tratamiento
-                  titularidad de <strong className="text-[var(--color-ink)]">{LEGAL_ENTITY}</strong>.
-                </dd>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">Finalidad</dt>
-                <dd>
-                  La finalidad del tratamiento de los datos corresponde a cada una de las actividades de tratamiento
-                  que realiza {LEGAL_ENTITY} y se limitan exclusivamente a la realización de las actividades
-                  comerciales objeto de la empresa.
-                </dd>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">Legitimación</dt>
-                <dd>
-                  El tratamiento de sus datos se realiza para el cumplimiento de obligaciones legales por parte de
-                  {LEGAL_ENTITY} y éste es necesario para la ejecución de un contrato en el que el interesado es
-                  parte o para la aplicación a petición de éste de medidas precontractuales.
-                </dd>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">Conservación de datos</dt>
-                <dd>
-                  Los datos personales proporcionados se conservarán durante el tiempo necesario para cumplir con
-                  la finalidad para la que se recaban y para determinar las posibles responsabilidades que se pudieran
-                  derivar de la finalidad, además de los períodos establecidos en la normativa de archivos y
-                  documentación.
-                </dd>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">Comunicación de datos</dt>
-                <dd>
-                  Con carácter general no se comunicarán los datos personales a terceros, salvo obligación legal, entre
-                  las que pueden estar las comunicaciones al Defensor del Pueblo, Jueces y Tribunales, interesados en
-                  los procedimientos relacionados con las reclamaciones presentadas.
-                </dd>
-              </div>
-              <div className="rounded-2xl border border-[var(--color-border)] bg-white/70 p-6">
-                <dt className="text-base font-semibold text-[var(--color-ink)] mb-2">
-                  Derechos de los interesados
-                </dt>
-                <dd>
-                  Cualquier persona tiene derecho a obtener confirmación sobre los tratamientos que de sus datos se
-                  llevan a cabo por {LEGAL_ENTITY}.
-                  <br />
-                  Puede ejercer sus derechos de acceso, rectificación, supresión y portabilidad de sus datos, de
-                  limitación y oposición a su tratamiento, cuando procedan, ante:
-                  <br />
-                  <strong className="text-[var(--color-ink)]">{LEGAL_ENTITY}</strong> · {LEGAL_ADDRESS_1} · correo electrónico:{" "}
-                  <a className="underline text-[var(--color-ink)]" href={`mailto:${LEGAL_RIGHTS_EMAIL}`}>
-                    {LEGAL_RIGHTS_EMAIL}
-                  </a>.
-                </dd>
-              </div>
-            </dl>
           </section>
 
           <section className="space-y-5">
-            <h2 className="text-3xl sm:text-[34px] font-semibold tracking-tight text-[var(--color-ink)] leading-tight">
-              Aviso legal
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Finalidades de la web
             </h2>
-            <p>
-              Este portal, cuyo titular es <strong>{LEGAL_ENTITY}</strong>, con CIF {LEGAL_CIF}, domicilio en{" "}
-              {LEGAL_ADDRESS_2}, está constituido por el sitio web asociado al dominio{" "}
-              <a className="underline text-[var(--color-ink)]" href={`https://${LEGAL_SITE}`} target="_blank" rel="noopener noreferrer">
-                {LEGAL_SITE}
-              </a>.
-            </p>
-
-            <div className="space-y-5">
-              <div>
-                <h3 className="text-2xl font-semibold text-[var(--color-ink)] mb-3">
-                  Propiedad intelectual e industrial
+            <div className="grid gap-5">
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                  Navegacion y funcionamiento del sitio
                 </h3>
-                <p>
-                  El diseño del portal y sus códigos fuente, así como los logos, marcas y demás signos distintivos que
-                  aparecen en el mismo pertenecen a {LEGAL_ENTITY} y están protegidos por los correspondientes
-                  derechos de propiedad intelectual e industrial.
+                <p className="mt-3">
+                  Mostrar la informacion publica de la clinica, mantener la
+                  seguridad basica del sitio y recordar la eleccion de
+                  consentimiento del usuario cuando el sistema de cookies este
+                  activo.
                 </p>
               </div>
-
-              <div>
-                <h3 className="text-2xl font-semibold text-[var(--color-ink)] mb-3">
-                  Responsabilidad de los contenidos
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                  Contacto voluntario del usuario
                 </h3>
-                <p>
-                  {LEGAL_ENTITY} no se hace responsable de la legalidad de otros sitios web de terceros desde los
-                  que pueda accederse al portal. {LEGAL_ENTITY} tampoco responde por la legalidad de otros sitios web
-                  de terceros, que pudieran estar vinculados o enlazados desde este portal.
+                <p className="mt-3">
+                  Facilitar que el usuario contacte con la clinica por telefono,
+                  email o WhatsApp si decide hacerlo voluntariamente desde los
+                  enlaces del sitio.
                 </p>
-                <p>
-                  {LEGAL_ENTITY} se reserva el derecho a realizar cambios en el sitio web sin previo aviso, al
-                  objeto de mantener actualizada su información, añadiendo, modificando, corrigiendo o eliminando los
-                  contenidos publicados o el diseño del portal.
-                </p>
-                <p>
-                  {LEGAL_ENTITY} no será responsable del uso que terceros hagan de la información publicada en el
-                  portal, ni tampoco de los daños sufridos o pérdidas económicas que, de forma directa o indirecta,
-                  produzcan o puedan producir perjuicios económicos, materiales o sobre datos, provocados por el uso de
-                  dicha información.
+              </div>
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                  Contenidos embebidos y servicios externos
+                </h3>
+                <p className="mt-3">
+                  Activar servicios como el mapa embebido solo cuando el usuario
+                  haya consentido la categoria correspondiente o cuando elija
+                  salir a un sitio externo.
                 </p>
               </div>
             </div>
           </section>
 
           <section className="space-y-5">
-            <h2 className="text-3xl sm:text-[34px] font-semibold tracking-tight text-[var(--color-ink)] leading-tight">
-              Ley aplicable
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Base juridica
             </h2>
             <p>
-              La ley aplicable en caso de disputa o conflicto de interpretación de los términos que conforman este
-              aviso legal, así como cualquier cuestión relacionada con los servicios del presente portal, será la
-              <strong className="text-[var(--color-ink)]"> ley española</strong>.
+              La base juridica depende del tratamiento concreto:
+            </p>
+            <ul className="grid gap-4">
+              <li className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <strong className="text-[var(--color-ink)]">
+                  Funcionamiento necesario de la web:
+                </strong>{" "}
+                interes legitimo del responsable y, cuando proceda para
+                tecnologias de almacenamiento, la exencion del articulo 22.2 de
+                la LSSI.
+              </li>
+              <li className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <strong className="text-[var(--color-ink)]">
+                  Preferencias, analitica o marketing opcional:
+                </strong>{" "}
+                consentimiento del usuario.
+              </li>
+              <li className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <strong className="text-[var(--color-ink)]">
+                  Contacto iniciado por el usuario:
+                </strong>{" "}
+                aplicacion de medidas precontractuales o gestion de la solicitud
+                formulada por la propia persona interesada.
+              </li>
+            </ul>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Destinatarios y encargados
+            </h2>
+            <div className="grid gap-5">
+              {PROCESSORS.map((processor) => (
+                <div
+                  key={processor.name}
+                  className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6"
+                >
+                  <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                    {processor.name}
+                  </h3>
+                  <p className="mt-3">{processor.role}</p>
+                </div>
+              ))}
+            </div>
+            <p>
+              Cuando el usuario pulsa enlaces a servicios de terceros, la
+              clinica deja de controlar el tratamiento realizado por esas
+              plataformas y pasa a aplicarse la politica propia del tercero.
+            </p>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Transferencias internacionales
+            </h2>
+            <p>
+              Algunos proveedores tecnicos o servicios externos utilizados por el
+              usuario pueden operar fuera del Espacio Economico Europeo o apoyarse
+              en infraestructura internacional. Cuando esto ocurra, el
+              responsable exigira las garantias adecuadas previstas por la
+              normativa aplicable y, en su caso, actualizara esta politica para
+              reflejar los proveedores realmente activos.
+            </p>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Plazos de conservacion
+            </h2>
+            <p>
+              Los datos vinculados a la navegacion se conservaran durante el
+              tiempo necesario para prestar el servicio, atender incidencias
+              tecnicas y cumplir con las obligaciones legales. Las duraciones de
+              cookies y tecnologias equivalentes se detallan en la{" "}
+              <a className="underline text-[var(--color-ink)]" href="/cookies">
+                Politica de cookies
+              </a>{" "}
+              y en el inventario que corresponda en cada momento.
+            </p>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Derechos de las personas interesadas
+            </h2>
+            <p>
+              Puedes solicitar acceso, rectificacion, supresion, oposicion,
+              limitacion del tratamiento y, cuando proceda, portabilidad,
+              dirigiendote a {LEGAL_ENTITY} a traves del correo{" "}
+              <a
+                className="underline text-[var(--color-ink)]"
+                href={`mailto:${LEGAL_RIGHTS_EMAIL}`}
+              >
+                {LEGAL_RIGHTS_EMAIL}
+              </a>
+              .
+            </p>
+            <p>
+              Tambien puedes presentar una reclamacion ante la Agencia Espanola
+              de Proteccion de Datos si consideras que el tratamiento no se
+              ajusta a la normativa.
+            </p>
+          </section>
+
+          <section className="space-y-5">
+            <h2 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)] sm:text-[34px]">
+              Sitios y servicios externos
+            </h2>
+            <p>
+              Esta web enlaza o puede abrir servicios de terceros como Google
+              Maps, Google Reviews o WhatsApp. El banner y las politicas de esta
+              clinica no sustituyen las condiciones de esos servicios externos.
+            </p>
+            <p>
+              Si una futura funcionalidad de cita se prestara desde un dominio de
+              tercero, esa operativa quedaria sometida al aviso de privacidad y
+              cookies del proveedor correspondiente.
             </p>
           </section>
         </article>

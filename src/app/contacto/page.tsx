@@ -2,16 +2,50 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { MapPin, Clock, Navigation } from "lucide-react";
+import { CookiePreferencesTrigger } from "@/components/CookiePreferencesTrigger";
 import { Container } from "@/components/Container";
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
+
+type CookiebotConsentState = {
+  preferences?: boolean;
+};
+
+type CookiebotApi = {
+  consent?: CookiebotConsentState;
+};
+
+type WindowWithCookiebot = Window & {
+  Cookiebot?: CookiebotApi;
+};
 
 export default function ContactoPage() {
   const whatsappNumber = formatPhoneForWhatsApp(siteConfig.phone.whatsapp);
   const whatsappText = encodeURIComponent(
     "Hola, quiero información y/o concertar una cita en EAR Audiología Avanzada Albacete, sin compromiso."
   );
+  const [canLoadMap, setCanLoadMap] = useState(false);
+
+  useEffect(() => {
+    const updateMapConsent = () => {
+      const cookiebot = (window as WindowWithCookiebot).Cookiebot;
+      setCanLoadMap(Boolean(cookiebot?.consent?.preferences));
+    };
+
+    updateMapConsent();
+
+    window.addEventListener("CookiebotOnConsentReady", updateMapConsent as EventListener);
+    window.addEventListener("CookiebotOnAccept", updateMapConsent as EventListener);
+    window.addEventListener("CookiebotOnDecline", updateMapConsent as EventListener);
+
+    return () => {
+      window.removeEventListener("CookiebotOnConsentReady", updateMapConsent as EventListener);
+      window.removeEventListener("CookiebotOnAccept", updateMapConsent as EventListener);
+      window.removeEventListener("CookiebotOnDecline", updateMapConsent as EventListener);
+    };
+  }, []);
 
   return (
     <div className="py-12 lg:py-16">
@@ -164,19 +198,52 @@ export default function ContactoPage() {
 
           <div className="relative overflow-hidden rounded-[var(--radius-lg)] border border-[color:var(--color-gold)]/25 shadow-[0_20px_60px_rgba(28,27,26,0.08)]">
             <div className="relative h-[460px] w-full md:h-[560px]">
-              <iframe
-                title="Mapa EAR Audiología Avanzada"
-                src={siteConfig.maps.embedUrl}
-                className="h-full w-full"
-                style={{
-                  border: 0,
-                  filter:
-                    "sepia(0.45) saturate(0.8) contrast(0.96) brightness(1.03)",
-                }}
-                loading="lazy"
-                data-testid="ubicacion-map"
-              />
-              <div className="pointer-events-none absolute inset-0 bg-[color:var(--color-gold)]/5 mix-blend-multiply" />
+              {canLoadMap ? (
+                <>
+                  <iframe
+                    title="Mapa EAR Audiología Avanzada"
+                    src={siteConfig.maps.embedUrl}
+                    className="h-full w-full"
+                    style={{
+                      border: 0,
+                      filter:
+                        "sepia(0.45) saturate(0.8) contrast(0.96) brightness(1.03)",
+                    }}
+                    loading="lazy"
+                    data-testid="ubicacion-map"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-[color:var(--color-gold)]/5 mix-blend-multiply" />
+                </>
+              ) : (
+                <div className="flex h-full flex-col justify-between bg-[linear-gradient(160deg,#fdfbf6_0%,#f4eadc_100%)] p-6 sm:p-8">
+                  <div className="max-w-xl space-y-4">
+                    <div className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--color-brand-strong)]">
+                      Mapa interactivo
+                    </div>
+                    <h3 className="text-3xl font-semibold tracking-tight text-[var(--color-ink)]">
+                      Disponible al aceptar preferencias
+                    </h3>
+                    <p className="text-[var(--color-muted)]">
+                      Para proteger tu privacidad, el mapa embebido no se carga
+                      hasta que aceptas la categoria de preferencias. Mientras
+                      tanto, puedes ver la direccion y abrir la ruta en un sitio
+                      externo.
+                    </p>
+                    <div className="flex flex-col gap-3 sm:flex-row">
+                      <a
+                        href={siteConfig.maps.directionsUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        data-testid="directions-button"
+                        className="inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-ink)] px-6 py-3 text-[0.8rem] uppercase tracking-[0.18em] text-[color:var(--color-bone)] transition-all duration-300 hover:bg-[color:var(--color-gold)] hover:text-[color:var(--color-ink)]"
+                      >
+                        <Navigation size={14} strokeWidth={1.5} /> Abrir ruta
+                      </a>
+                      <CookiePreferencesTrigger className="inline-flex items-center justify-center rounded-full border border-[var(--color-border)] bg-white px-6 py-3 text-sm font-semibold text-[var(--color-ink)] shadow-sm hover:bg-zinc-50" />
+                    </div>
+                  </div>
+                </div>
+              )}
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -216,7 +283,7 @@ export default function ContactoPage() {
                   href={siteConfig.maps.directionsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  data-testid="directions-button"
+                  data-testid="directions-button-secondary"
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-ink)] px-6 py-3 text-[0.75rem] uppercase tracking-[0.18em] text-[color:var(--color-bone)] transition-all duration-400 hover:bg-[color:var(--color-gold)] hover:shadow-[0_10px_30px_rgba(198,168,124,0.4)] hover:text-[color:var(--color-ink)]"
                 >
                   <Navigation size={14} strokeWidth={1.5} /> Cómo llegar

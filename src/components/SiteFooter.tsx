@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/Container";
+import { CookiePreferencesTrigger } from "@/components/CookiePreferencesTrigger";
 import { ModeToggle } from "@/components/ModeToggle";
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
@@ -140,6 +141,7 @@ export function SiteFooter() {
               <Link href="/cookies" className="hover:text-[var(--color-ink)]">
                 Cookies
               </Link>
+              <CookiePreferencesTrigger className="hover:text-[var(--color-ink)] underline-offset-2 hover:underline" />
             </div>
           </div>
         </div>

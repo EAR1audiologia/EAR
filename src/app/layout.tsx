@@ -3,6 +3,7 @@ import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { ComingSoonModal } from "@/components/ComingSoonModal";
 import { CTAFloatBar } from "@/components/CTAFloatBar";
+import { CookiebotScripts } from "@/components/CookiebotScripts";
 import { LenisWrapper } from "@/components/LenisWrapper";
 import { LocalBusinessSchema } from "@/components/LocalBusinessSchema";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
@@ -103,6 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${geistSans.variable} ${playfair.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[var(--color-bg)] text-[var(--color-ink)]">
+        <CookiebotScripts />
         <LenisWrapper>
           <LocalBusinessSchema />
           <SiteHeader />
