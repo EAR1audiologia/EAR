@@ -151,3 +151,20 @@ body {
   background-size: 240px 240px;
   mix-blend-mode: multiply;
 }
+
+#CybotCookiebotDialogBodyUnderlay {
+  z-index: 2147483646 !important;
+}
+
+#CybotCookiebotDialog {
+  z-index: 2147483647 !important;
+  top: 50% !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  transform: translate(-50%, -50%) !important;
+  max-width: min(960px, calc(100vw - 2rem)) !important;
+  max-height: calc(100vh - 2rem) !important;
+  overflow: auto !important;
+}
