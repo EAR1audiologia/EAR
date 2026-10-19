@@ -20,6 +20,7 @@ const encodedAddress = fullAddress ? encodeURIComponent(fullAddress) : "";
 const rawEmbed = sanitizeHttpUrl(process.env.NEXT_PUBLIC_MAPS_EMBED_URL ?? "");
 const rawDirections = sanitizeHttpUrl(process.env.NEXT_PUBLIC_MAPS_DIRECTIONS_URL ?? "");
 const rawReviewsUrl = sanitizeHttpUrl(process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_URL ?? "");
+const rawInstagramUrl = sanitizeHttpUrl(process.env.NEXT_PUBLIC_INSTAGRAM_URL ?? "");
 
 export const siteConfig = {
   brandName: sanitizePrintable(process.env.NEXT_PUBLIC_BRAND_NAME ?? "", SAFE_TEXT_SHORT),
@@ -46,5 +47,10 @@ export const siteConfig = {
     googleRatingText: sanitizePrintable(process.env.NEXT_PUBLIC_GOOGLE_RATING_TEXT ?? "", 40),
     googleReviewsCountText: sanitizePrintable(process.env.NEXT_PUBLIC_GOOGLE_REVIEWS_COUNT ?? "", 20),
     googleReviewsUrl: sanitizeHref(rawReviewsUrl),
+  },
+  instagram: {
+    profileUrl: sanitizeHref(
+      rawInstagramUrl || "https://www.instagram.com/ear.audiologia.avanzada"
+    ),
   },
 } as const;

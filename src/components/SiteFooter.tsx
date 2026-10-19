@@ -6,11 +6,30 @@ import { ModeToggle } from "@/components/ModeToggle";
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
 
+function InstagramIcon({ className = "h-5 w-5" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" aria-hidden>
+      <rect
+        x="3.25"
+        y="3.25"
+        width="17.5"
+        height="17.5"
+        rx="5.25"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <circle cx="12" cy="12" r="4.1" stroke="currentColor" strokeWidth="1.8" />
+      <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" />
+    </svg>
+  );
+}
+
 export function SiteFooter() {
   const whatsappNumber = formatPhoneForWhatsApp(siteConfig.phone.whatsapp);
   const whatsappText = encodeURIComponent(
     "Hola, quiero información sobre audición en EAR Audiología Avanzada Albacete."
   );
+  const instagramUrl = siteConfig.instagram.profileUrl;
 
   return (
     <footer className="border-t border-[var(--color-border)] bg-white pb-24 lg:pb-0">
@@ -126,6 +145,27 @@ export function SiteFooter() {
                   WhatsApp
                 </a>
               </div>
+              {instagramUrl ? (
+                <div className="flex items-center gap-3 pt-2">
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram de EAR Audiología Avanzada"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border-2 border-[var(--color-brand-strong)]/60 bg-white text-[var(--color-brand-strong)] shadow-sm transition-all hover:-translate-y-0.5 hover:border-[var(--color-brand-strong)] hover:text-[var(--color-ink)]"
+                  >
+                    <InstagramIcon className="h-5 w-5" />
+                  </a>
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-[var(--color-brand-strong)] hover:underline"
+                  >
+                    Síguenos en Instagram
+                  </a>
+                </div>
+              ) : null}
             </div>
             <div className="pt-4">
               <ModeToggle />
