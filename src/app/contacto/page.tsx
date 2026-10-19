@@ -275,8 +275,8 @@ export default function ContactoPage() {
                     className="mt-0.5 text-[color:var(--color-gold)]"
                   />
                   <div className="text-[0.9rem] text-[color:var(--color-stone)]">
-                    <p>Lun – Vie · 9:30 – 14:00</p>
-                    <p>16:30 – 20:00</p>
+                    <p>Lun – Jue · 9:00 – 19:00</p>
+                    <p>Vie · 9:00 – 15:00</p>
                   </div>
                 </div>
                 <a

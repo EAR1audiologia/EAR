@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "@/components/Container";
 import { ProductPhotoGallery } from "@/components/ProductPhotoGallery";
 import { siteConfig } from "@/config/site";
@@ -61,21 +62,14 @@ export default function InvisiblesRecargablesPage() {
                     key={item.title}
                     className="flex items-start gap-3 rounded-2xl border border-[var(--color-border)] bg-white/70 p-4 shadow-[0_10px_30px_-20px_rgba(203,178,150,0.45)] backdrop-blur"
                   >
-                    <span className="mt-1 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--color-brand-strong)] text-white">
-                      <svg
-                        viewBox="0 0 24 24"
-                        className="h-3 w-3"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="3"
-                        aria-hidden
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="m5 12.75 5.25 5.25 9-9"
-                        />
-                      </svg>
+                    <span className="mt-1 inline-flex h-6 w-6 shrink-0 items-center justify-center">
+                      <Image
+                        src="/brand/ear-logo-icon-LOGOICONv1.png"
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="max-h-6 max-w-6 object-contain"
+                      />
                     </span>
                     <div>
                       <div className="font-semibold">{item.title}</div>
