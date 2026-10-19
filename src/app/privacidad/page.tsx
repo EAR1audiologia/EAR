@@ -1,7 +1,7 @@
 import { Container } from "@/components/Container";
 import { siteConfig } from "@/config/site";
 
-const LEGAL_ENTITY = "Audifonos Elena S.L.";
+const LEGAL_ENTITY = "Audífonos Eleana S.L.";
 const LEGAL_CIF = "B26856781";
 const LEGAL_SITE = "earaudiologiaavanzada.com";
 const LEGAL_ADDRESS = "C/ Carmen, 17 · 02005 Albacete";

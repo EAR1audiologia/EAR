@@ -4,7 +4,7 @@ import { CookiePreferencesTrigger } from "@/components/CookiePreferencesTrigger"
 import { COOKIES_BANNER_COPY } from "@/content/cookies-banner-copy";
 import { siteConfig } from "@/config/site";
 
-const LEGAL_ENTITY = "Audifonos Elena S.L.";
+const LEGAL_ENTITY = "Audífonos Eleana S.L.";
 const LEGAL_SITE = "earaudiologiaavanzada.com";
 const UPDATED_AT = "26 de septiembre de 2026";
 
