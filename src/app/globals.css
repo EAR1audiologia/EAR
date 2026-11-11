@@ -149,6 +149,50 @@ body {
   }
 }
 
+/* Black Friday ribbon. Its track holds the same run of offers twice, so
+   sliding it left by half its width lands on an identical frame and loops. */
+@keyframes bf-ribbon-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.bf-ribbon-track {
+  animation: bf-ribbon-slide 100s linear infinite;
+}
+
+.bf-ribbon:focus-visible {
+  outline-color: #4f3a28;
+  outline-offset: -5px;
+}
+
+.bf-ribbon:focus-visible .bf-ribbon-track {
+  animation-play-state: paused;
+}
+
+/* Only where hovering is real: on touch screens it sticks after a tap. */
+@media (hover: hover) {
+  .bf-ribbon:hover .bf-ribbon-track {
+    animation-play-state: paused;
+  }
+}
+
+/* The logo file is gold. The mask repaints it in the lettering colour and
+   keeps the spiral and "Ear", cutting off the small print to their right. */
+.bf-ribbon-logo {
+  height: 1.15rem;
+  width: 3.7rem;
+  background-color: currentColor;
+  -webkit-mask: url("/brand/ear-logo-main.png") left center / auto 100% no-repeat;
+  mask: url("/brand/ear-logo-main.png") left center / auto 100% no-repeat;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bf-ribbon-track {
+    animation: none;
+  }
+}
+
 .display {
   font-family: var(--font-serif);
   font-weight: 500;

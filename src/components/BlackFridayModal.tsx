@@ -7,6 +7,9 @@ import { createPortal } from "react-dom";
 import { siteConfig } from "@/config/site";
 import { formatPhoneForWhatsApp } from "@/utils/sanitize";
 
+/** Dispatch on `window` to open the promotion on demand (the ribbon does). */
+export const BLACK_FRIDAY_OPEN_EVENT = "ear:black-friday-open";
+
 const OPEN_DELAY_MS = 1200;
 const EASE_OUT = [0.22, 1, 0.36, 1] as const;
 
@@ -109,16 +112,25 @@ export function BlackFridayModal() {
       schedule();
     };
 
+    // Asked for by hand: open now, and count it as this visit's showing.
+    const openNow = () => {
+      shown = true;
+      window.clearTimeout(timer);
+      setOpen(true);
+    };
+
     schedule();
     window.addEventListener("CookiebotOnAccept", schedule);
     window.addEventListener("CookiebotOnDecline", schedule);
     window.addEventListener("pageshow", handlePageShow);
+    window.addEventListener(BLACK_FRIDAY_OPEN_EVENT, openNow);
 
     return () => {
       window.clearTimeout(timer);
       window.removeEventListener("CookiebotOnAccept", schedule);
       window.removeEventListener("CookiebotOnDecline", schedule);
       window.removeEventListener("pageshow", handlePageShow);
+      window.removeEventListener(BLACK_FRIDAY_OPEN_EVENT, openNow);
     };
   }, []);
 

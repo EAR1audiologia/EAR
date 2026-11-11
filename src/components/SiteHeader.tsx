@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { BlackFridayRibbon } from "@/components/BlackFridayRibbon";
 import { Container } from "@/components/Container";
 import { MobileNav } from "@/components/MobileNav";
 import { siteConfig } from "@/config/site";
@@ -149,6 +150,7 @@ export function SiteHeader() {
           </div>
         </div>
       </Container>
+      <BlackFridayRibbon />
     </motion.header>
   );
 }
