@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { BlackFridayModal } from "@/components/BlackFridayModal";
 import { CTAFloatBar } from "@/components/CTAFloatBar";
 import { CookiebotScripts } from "@/components/CookiebotScripts";
 import { LenisWrapper } from "@/components/LenisWrapper";
@@ -113,6 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteFooter />
           <ScrollToTopButton />
           <CTAFloatBar />
+          <BlackFridayModal />
         </LenisWrapper>
       </body>
     </html>
