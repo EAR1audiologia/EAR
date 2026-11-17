@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Geist, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { BlackFridayModal } from "@/components/BlackFridayModal";
@@ -116,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <CTAFloatBar />
           <BlackFridayModal />
         </LenisWrapper>
+        <Analytics />
       </body>
     </html>
   );

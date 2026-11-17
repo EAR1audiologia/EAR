@@ -6,12 +6,12 @@ const LEGAL_CIF = "B26856781";
 const LEGAL_SITE = "earaudiologiaavanzada.com";
 const LEGAL_ADDRESS = "C/ Carmen, 17 · 02005 Albacete";
 const LEGAL_RIGHTS_EMAIL = siteConfig.contactEmail;
-const UPDATED_AT = "26 de septiembre de 2026";
+const UPDATED_AT = "17 de noviembre de 2026";
 
 const PROCESSORS = [
   {
     name: "Vercel",
-    role: "Alojamiento y entrega de la web",
+    role: "Alojamiento de la web y medicion agregada de visitas, sin cookies y sin identificar a la persona",
   },
   {
     name: "Cookiebot / Usercentrics",
@@ -113,6 +113,16 @@ export default function PrivacidadPage() {
               </div>
               <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
                 <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                  Medicion agregada de visitas
+                </h3>
+                <p className="mt-3">
+                  Conocer, sin identificar a la persona, que paginas se visitan,
+                  desde que tipo de dispositivo y desde que origen. No incluye
+                  los clics en telefono, WhatsApp, el pop-up ni la cinta.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">
                   Contenidos embebidos y servicios externos
                 </h3>
                 <p className="mt-3">
@@ -142,7 +152,13 @@ export default function PrivacidadPage() {
               </li>
               <li className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
                 <strong className="text-[var(--color-ink)]">
-                  Preferencias, analitica o marketing opcional:
+                  Medicion agregada de visitas:
+                </strong>{" "}
+                interes legitimo. No usa cookies ni identifica a la persona.
+              </li>
+              <li className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <strong className="text-[var(--color-ink)]">
+                  Preferencias o marketing opcional:
                 </strong>{" "}
                 consentimiento del usuario.
               </li>

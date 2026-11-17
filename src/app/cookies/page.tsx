@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 
 const LEGAL_ENTITY = "Audífonos Eleana S.L.";
 const LEGAL_SITE = "earaudiologiaavanzada.com";
-const UPDATED_AT = "26 de septiembre de 2026";
+const UPDATED_AT = "17 de noviembre de 2026";
 
 const COOKIE_CATEGORIES = [
   {
@@ -23,9 +23,9 @@ const COOKIE_CATEGORIES = [
   },
   {
     title: "Analiticas",
-    legalBasis: "Consentimiento",
+    legalBasis: "Interes legitimo. No usa cookies.",
     content:
-      "Se mantienen desactivadas en este momento. Solo se usarian para medicion agregada de la web y nunca antes de obtener una accion afirmativa del usuario.",
+      "Activas con Vercel Web Analytics. Miden de forma agregada las paginas visitadas, el tipo de dispositivo y el origen de la visita. No identifican a la persona y no registran los clics en telefono, WhatsApp, el pop-up ni la cinta.",
   },
   {
     title: "Marketing",
@@ -148,6 +148,17 @@ export default function CookiesPage() {
                   contenido de preferencias. Si no aceptas esa categoria, la web
                   no carga el embed y ofrece una alternativa estatica con la
                   direccion y el enlace externo de como llegar.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">
+                <h3 className="text-xl font-semibold text-[var(--color-ink)]">
+                  Medicion de visitas
+                </h3>
+                <p className="mt-3">
+                  Vercel Web Analytics cuenta, de forma agregada, las paginas
+                  visitadas, el tipo de dispositivo y el origen de la visita.
+                  No guarda una cookie, no identifica a la persona y no registra
+                  si pulsa el telefono, WhatsApp, el pop-up o la cinta.
                 </p>
               </div>
               <div className="rounded-2xl border border-[var(--color-border)] bg-white/80 p-6">

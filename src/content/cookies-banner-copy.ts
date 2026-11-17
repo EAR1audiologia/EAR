@@ -1,7 +1,7 @@
 export const COOKIES_BANNER_COPY = {
   title: "Tu privacidad importa",
   description:
-    "Usamos cookies necesarias para que la web funcione y, solo si lo aceptas, preferencias para contenidos embebidos, analitica agregada de la web y futuras herramientas opcionales. Rechazar no condiciona la cita ni el acceso a la informacion.",
+    "Usamos cookies necesarias para que la web funcione y, solo si lo aceptas, preferencias para contenidos embebidos y futuras herramientas opcionales. La medicion agregada de visitas no usa cookies. Rechazar no condiciona la cita ni el acceso a la informacion.",
   categories: [
     {
       key: "necesarias",
@@ -19,7 +19,7 @@ export const COOKIES_BANNER_COPY = {
       key: "analiticas",
       label: "Analiticas",
       description:
-        "Reservadas para medicion agregada de la web. No se activan sin tu consentimiento expreso.",
+        "Miden de forma agregada las paginas visitadas, sin cookies y sin identificarte. No registran los clics en telefono o WhatsApp.",
     },
     {
       key: "marketing",
